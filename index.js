@@ -688,7 +688,7 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('sixStar', 'Deals **15%** more damage to enemies with **14** or more energy; Chance to use Special Skill **+15%**.');
 			break;
 
-		case "hachisaki":
+		case "hachishiki":
 			partnerDescription.set('cost', '16');
 
 			partnerDescription.set('passive', 'When Shiki Hachi is stunned, increases your DMG RES Rate by **30%**. When on the same team, Rie\'s DMG Rate and DMG RES are reduced by **80%**.');
