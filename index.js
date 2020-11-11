@@ -186,9 +186,8 @@ client.on('message', async message =>
     // ...
     if (command === 'help') {
         const str = 
-            "add [summoner name] Adds a player to the list." +
-            "\ndelete [summoner name] Deletes a player from the list." +
-            "\nranks Lists all added players and their ranks."
+			"!search [partnerName]" +
+			"\n Displays partner's skills and lens.";
         message.channel.send(str);
     }
 
