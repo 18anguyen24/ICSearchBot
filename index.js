@@ -4,6 +4,8 @@ const fetch = require('node-fetch');
 const client = new Client();
 const prefix = '!';
 
+client.user.setActivity('!help, LF Maki');
+
 let radiantIcons = new Map();
 radiantIcons.set('kasumi', 'https://yue-tian.github.io/ic-partner/partner/ssr/kasumi.PNG');
 radiantIcons.set('gemmy', 'https://yue-tian.github.io/ic-partner/partner/ssr/gemmy.PNG');
@@ -183,7 +185,7 @@ client.on('message', async message =>
     const args = message.content.slice(prefix.length).trim().split(/ +/);
 
 	const command = args.shift().toLowerCase();
-    // ...
+	// ...
     if (command === 'help') {
         const str = 
 			"__!search__ `[partnerName]`" +
