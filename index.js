@@ -4,8 +4,6 @@ const fetch = require('node-fetch');
 const client = new Client();
 const prefix = '!';
 
-client.user.setActivity('!help, LF Maki');
-
 let radiantIcons = new Map();
 radiantIcons.set('kasumi', 'https://yue-tian.github.io/ic-partner/partner/ssr/kasumi.PNG');
 radiantIcons.set('gemmy', 'https://yue-tian.github.io/ic-partner/partner/ssr/gemmy.PNG');
@@ -180,6 +178,8 @@ client.once('ready', () => {
 
 client.on('message', async message => 
 {
+	client.user.setActivity('Maki', { type: 'WATCHING' });
+
     if (!message.content.startsWith(prefix) || message.author.bot) return;
 
     const args = message.content.slice(prefix.length).trim().split(/ +/);
