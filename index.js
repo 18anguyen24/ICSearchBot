@@ -939,7 +939,7 @@ function partnerDataBase(partner, typeToFind)
 		case "theenforcers":
 			partnerDescription.set('cost', '19');
 
-			partnerDescription.set('passive', 'When the Enforcers are not in play, every Ally partner of the Summon class that joins that battle requires **1** less Energy.the Spirit Fox summoned by Gagaku dies, **132%** ATK DMG is dealt to the enemy unit with the lowest HP.');
+			partnerDescription.set('passive', 'When the Enforcers are not in play, every Ally partner of the Summon class that joins that battle requires **1** less Energy.');
 			partnerDescription.set('uniqueSkill', 'Attack a __single__ enemy and deal **ATK*475%** damage. Vanessa and Lucy inherit **100%** of Betty\'s ATK, **100%** of her DEF, and **60%** of her HP. The **3** of them gain [Life Link]. Vanessa taunts the enemy team for **2** rounds.');
 			partnerDescription.set('special',  'Attacks an enemy __column__ and deals **ATK*168%** damage.');
 			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
