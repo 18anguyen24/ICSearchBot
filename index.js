@@ -186,7 +186,7 @@ client.on('message', async message =>
     // ...
     if (command === 'help') {
         const str = 
-			"!search [partnerName]" +
+			"__!search__ `[partnerName]`" +
 			"\n Displays partner's skills and lens.";
         message.channel.send(str);
     }
