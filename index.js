@@ -410,7 +410,7 @@ function findClass(name)
 	trueClass.set('spell', 'https://www.illusionconnectgame.com/images/temp200821/public/Spell.png');
 	trueClass.set('light', 'https://www.illusionconnectgame.com/images/temp200821/public/Light.png');
 	trueClass.set('summon', 'https://www.illusionconnectgame.com/images/temp200821/public/Summon.png');
-	trueClass.set('heal', 'https://www.illusionconnectgame.com/images/temp200821/public/heal.png');
+	trueClass.set('heal', 'https://www.illusionconnectgame.com/images/temp200821/public/Heal.png');
 
 	return trueClass.get(partnerClass.get(name));
 }
