@@ -483,7 +483,7 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('cost', '15');
 
 			partnerDescription.set('passive', 'When Hersey appears, she deals **90% ATK DMG** to all enemy partners, and an additional **200% DMG** to Sorcerer class partners.');
-			partnerDescription.set('uniqueSkill', 'Attacks a __single__ enemy and deals **410%** damage. Enemy sorcerers will be attacked first.');
+			partnerDescription.set('uniqueSkill', 'Attacks a __single__ enemy and deals **410%** damage, and deals **30%** Spread Shot DMG to other enemy Sorcerer partners.');
 			partnerDescription.set('special', 'Attacks a single enemy and deals **ATK*168%** damage. Enemy sorcerer partners are attacked first.');
 			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
 
