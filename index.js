@@ -199,7 +199,7 @@ client.on('message', async message =>
 	if (command === 'invite')
 	{
 		const embed = newMessageEmbed()
-			.setDescription('__Invite!__')
+			.setTitle('__Invite!__')
 			.setURL('https://discord.com/api/oauth2/authorize?client_id=703145119565742180&permissions=39936&scope=bot');
 
 		message.channel.send(embed);
