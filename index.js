@@ -198,7 +198,7 @@ client.on('message', async message =>
 	
 	if (command === 'invite')
 	{
-		const embed = newMessageEmbed()
+		const embed = new MessageEmbed()
 			.setTitle('__Invite!__')
 			.setURL('https://discord.com/api/oauth2/authorize?client_id=703145119565742180&permissions=39936&scope=bot');
 
