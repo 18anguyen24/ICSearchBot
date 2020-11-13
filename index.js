@@ -186,12 +186,24 @@ client.on('message', async message =>
 
 	const command = args.shift().toLowerCase();
 	// ...
-    if (command === 'help') {
+	if (command === 'help') 
+	{
         const str = 
-			"__!search__ `[partnerName]`" +
-			"\n Displays partner's skills and lens.";
+			"**!search** `[partnerName]`" +
+			"\n Displays partner's skills and lens." +
+			"\n\n **!invite** " +
+			"\n Invite link to server.";
         message.channel.send(str);
-    }
+	}
+	
+	if (command === 'invite')
+	{
+		const embed = newMessageEmbed()
+			.setDescription('__Invite!__')
+			.setURL('https://discord.com/api/oauth2/authorize?client_id=703145119565742180&permissions=39936&scope=bot');
+
+		message.channel.send(embed);
+	}
 
 	if (command === 'search') 
 	{
