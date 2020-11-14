@@ -59,6 +59,8 @@ radiantIcons.set('rie', 'https://raw.githubusercontent.com/18anguyen24/ICSearchB
 radiantIcons.set('shanti', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/r/shanti.png');
 radiantIcons.set('mary', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/r/mary.png');
 radiantIcons.set('mia', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/r/mia.png');
+radiantIcons.set('astaroth', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/astaroth.JPG');
+radiantIcons.set('madhatter', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/sr/mad_hatter.JPG');
 
 let rarity = new Map();
 rarity.set('kasumi', 'SSR');
@@ -115,6 +117,8 @@ rarity.set('rie', 'R');
 rarity.set('shanti', 'R');
 rarity.set('mary', 'R');
 rarity.set('mia', 'R');
+rarity.set('astaroth', 'SSR');
+rarity.set('madhatter', 'SR');
 
 let trueNames = new Map();
 trueNames.set('kasumi', 'Kasumi');
@@ -171,6 +175,8 @@ trueNames.set('rie', 'Rie');
 trueNames.set('shanti', 'Shanti');
 trueNames.set('mary', 'Mary');
 trueNames.set('mia', 'Mia');
+trueNames.set('astaroth', 'Astaroth');
+trueNames.set('madhatter', 'Mad Hatter');
 
 client.once('ready', () => {
 	console.log('rd');
@@ -200,7 +206,18 @@ client.on('message', async message =>
 	{
 		const embed = new MessageEmbed()
 			.setTitle('__Invite!__')
+			.setColor('#FF02EC')
 			.setURL('https://discord.com/api/oauth2/authorize?client_id=703145119565742180&permissions=39936&scope=bot');
+
+		message.channel.send(embed);
+	}
+
+	if (command === 'banner')
+	{
+		const embed = new MessageEmbed()
+			.setTitle('Banner from #guide')
+			.setColor('#FF0202')
+			.setURL('https://docs.google.com/spreadsheets/d/e/2PACX-1vTVvty9BpQFxf6HemfEbcJcVSnLacRuooJ0V9HxNsuK16nXulkMoMqLGa4TjzL7ex-5lyzTgrd8B7is/pubhtml#');
 
 		message.channel.send(embed);
 	}
@@ -414,6 +431,8 @@ function findClass(name)
 	partnerClass.set('shanti', 'guardian');
 	partnerClass.set('mary', 'sorcerer');
 	partnerClass.set('mia', 'attack');
+	partnerClass.set('astaroth', 'spell');
+	partnerClass.set('madhatter', 'summon');
 
 	let trueClass = new Map();
 	trueClass.set('attack', 'https://www.illusionconnectgame.com/images/temp200821/public/Attack.png');
@@ -1141,6 +1160,32 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('twoStar', 'Deals damage equal to **ATK*225% (+55%)**.');
 			partnerDescription.set('threeStar','Deals **28%** more damage to Guardian class enemies; increases basic ATK and HP by **10%**.');
 			partnerDescription.set('fourStar', 'Restores HP by **15%** when taking action; chance to use special skill **+15%**.');
+			break;
+
+		case "astaroth":
+			partnerDescription.set('cost', '??');
+
+			partnerDescription.set('passive', 'When Astaroth dies, she restores 200 Rage to Leader and Barinas, restoring an additional **10%** HP to Leader.');
+			partnerDescription.set('uniqueSkill', 'Attacks the enemy __team__ and deals **ATK*210%** damage; **8%** of DMG heals the Leader.');
+			partnerDescription.set('special',  'Attacks an enemy __column__ and deals **ATK*105%** damage.');
+			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
+
+			partnerDescription.set('fourStar', 'TBD');
+			partnerDescription.set('fiveStar','TBD');
+			partnerDescription.set('sixStar', 'TBD');
+			break;
+
+		case "madhatter":
+			partnerDescription.set('cost', '??');
+
+			partnerDescription.set('passive', 'When the Mad Hatter appears, Alice, Jasmine, and Ann\'s DMG RES Rate increases by **30%**.');
+			partnerDescription.set('uniqueSkill', 'Creates **2** Hats.  When a Hat is destroyed, enemy team takes **120%** DMG. Enemy Sorcerers take an additional **40%** DMG.');
+			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*150%** damage.');
+			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*100%** damage.');
+
+			partnerDescription.set('threeStar', 'TBD');
+			partnerDescription.set('fourStar','TBD');
+			partnerDescription.set('fiveStar', 'TBD');
 			break;
 		}
 
