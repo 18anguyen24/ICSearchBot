@@ -1217,7 +1217,7 @@ function partnerDataBase(partner, typeToFind)
 		case "yume":
 			partnerDescription.set('cost', '??');
 
-			partnerDescription.set('passive', 'When Yume is present, reduce Rage recovery of all enemies by *20*; increasing self defense penetration by **25%**');
+			partnerDescription.set('passive', 'When Yume is present, reduce Rage recovery of all enemies by **20**; increasing self defense penetration by **25%**');
 			partnerDescription.set('uniqueSkill', 'Attacks the enemy __team__ and deals **ATK*210%** damage; **8%** of DMG heals the Leader.');
 			partnerDescription.set('special',  'Attacks a __single__ enemy  and deals **ATK*165%** damage and increases self DEF penetration by **15%** during combat, can\'t stack');
 			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
