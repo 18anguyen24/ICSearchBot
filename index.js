@@ -198,7 +198,9 @@ client.on('message', async message =>
 			"**!search** `[partnerName]`" +
 			"\n Displays partner's skills and lens." +
 			"\n\n **!invite** " +
-			"\n Invite link to server.";
+			"\n Invite link to server." +
+			"\n\n **!banner** " +
+			"\n Displays link to banner from #guide.";;
         message.channel.send(str);
 	}
 	
