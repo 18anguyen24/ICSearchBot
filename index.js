@@ -944,7 +944,7 @@ function partnerDataBase(partner, typeToFind)
 		case "miyuki":
 			partnerDescription.set('cost', '15');
 
-			partnerDescription.set('passive', 'All Miyuki\'s attacks decrease target\'s Rage by an additional **330%**.');
+			partnerDescription.set('passive', 'All Miyuki\'s attacks decrease target\'s Rage by an additional **330**.');
 			partnerDescription.set('uniqueSkill', 'Attacks the enemy __team__ and deals **ATK*215%** damage.');
 			partnerDescription.set('special',  'Attacks enemies in one __column__, dealing **120%** damage.');
 			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
@@ -1218,7 +1218,7 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('cost', '??');
 
 			partnerDescription.set('passive', 'When Yume is present, reduce Rage recovery of all enemies by **20**; increasing self defense penetration by **25%**');
-			partnerDescription.set('uniqueSkill', 'Attacks the enemy __team__ and deals **ATK*210%** damage; **8%** of DMG heals the Leader.');
+			partnerDescription.set('uniqueSkill', 'Attacks a __single__ enemy and deals **ATK*420%** damage and stealing **300** rage from the target. If the target\'s rage is 0 at this time, the target will be stunned for one round.');
 			partnerDescription.set('special',  'Attacks a __single__ enemy  and deals **ATK*165%** damage and increases self DEF penetration by **15%** during combat, can\'t stack');
 			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
 
