@@ -61,6 +61,9 @@ radiantIcons.set('mary', 'https://raw.githubusercontent.com/18anguyen24/ICSearch
 radiantIcons.set('mia', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/r/mia.png');
 radiantIcons.set('astaroth', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/astaroth.JPG');
 radiantIcons.set('madhatter', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/sr/mad_hatter.JPG');
+radiantIcons.set('yume', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/yume.JPG');
+radiantIcons.set('charlotte', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/charlotte.JPG');
+radiantIcons.set('alina', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/alina.JPG');
 
 let rarity = new Map();
 rarity.set('kasumi', 'SSR');
@@ -119,6 +122,9 @@ rarity.set('mary', 'R');
 rarity.set('mia', 'R');
 rarity.set('astaroth', 'SSR');
 rarity.set('madhatter', 'SR');
+rarity.set('yume', 'SSR');
+rarity.set('charlotte', 'SSR');
+rarity.set('alina', 'SSR');
 
 let trueNames = new Map();
 trueNames.set('kasumi', 'Kasumi');
@@ -177,6 +183,9 @@ trueNames.set('mary', 'Mary');
 trueNames.set('mia', 'Mia');
 trueNames.set('astaroth', 'Astaroth');
 trueNames.set('madhatter', 'Mad Hatter');
+trueNames.set('yume', 'Yume');
+trueNames.set('charlotte', 'Charlotte');
+trueNames.set('alina', 'Alina');
 
 client.once('ready', () => {
 	console.log('rd');
@@ -200,7 +209,9 @@ client.on('message', async message =>
 			"\n\n **!invite** " +
 			"\n Invite link to server." +
 			"\n\n **!banner** " +
-			"\n Displays link to banner from #guide.";;
+			"\n Displays link to banner from #guide." +
+			"\n\n **!skins** " +
+			"\n Displays link to (most)future skins possible from the KR server.";
         message.channel.send(str);
 	}
 	
@@ -220,6 +231,16 @@ client.on('message', async message =>
 			.setTitle('Banner from #guide')
 			.setColor('#FF0202')
 			.setURL('https://docs.google.com/spreadsheets/d/e/2PACX-1vTVvty9BpQFxf6HemfEbcJcVSnLacRuooJ0V9HxNsuK16nXulkMoMqLGa4TjzL7ex-5lyzTgrd8B7is/pubhtml#');
+
+		message.channel.send(embed);
+	}
+
+	if (command === 'skins')
+	{
+		const embed = new MessageEmbed()
+			.setTitle('Skins to date from the KR server')
+			.setColor('#0AFF02')
+			.setURL('https://gall.dcinside.com/mgallery/board/view/?id=illusionconnect&no=87643');
 
 		message.channel.send(embed);
 	}
@@ -435,6 +456,9 @@ function findClass(name)
 	partnerClass.set('mia', 'attack');
 	partnerClass.set('astaroth', 'spell');
 	partnerClass.set('madhatter', 'summon');
+	partnerClass.set('yume', 'attack');
+	partnerClass.set('charlotte', 'sorcerer');
+	partnerClass.set('alina', 'sorcerer');
 
 	let trueClass = new Map();
 	trueClass.set('attack', 'https://www.illusionconnectgame.com/images/temp200821/public/Attack.png');
@@ -1165,7 +1189,7 @@ function partnerDataBase(partner, typeToFind)
 			break;
 
 		case "astaroth":
-			partnerDescription.set('cost', '??');
+			partnerDescription.set('cost', '12');
 
 			partnerDescription.set('passive', 'When Astaroth dies, she restores 200 Rage to Leader and Barinas, restoring an additional **10%** HP to Leader.');
 			partnerDescription.set('uniqueSkill', 'Attacks the enemy __team__ and deals **ATK*210%** damage; **8%** of DMG heals the Leader.');
@@ -1178,7 +1202,7 @@ function partnerDataBase(partner, typeToFind)
 			break;
 
 		case "madhatter":
-			partnerDescription.set('cost', '??');
+			partnerDescription.set('cost', '14');
 
 			partnerDescription.set('passive', 'When the Mad Hatter appears, Alice, Jasmine, and Ann\'s DMG RES Rate increases by **30%**.');
 			partnerDescription.set('uniqueSkill', 'Creates **2** Hats.  When a Hat is destroyed, enemy team takes **120%** DMG. Enemy Sorcerers take an additional **40%** DMG.');
@@ -1188,6 +1212,45 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('threeStar', 'TBD');
 			partnerDescription.set('fourStar','TBD');
 			partnerDescription.set('fiveStar', 'TBD');
+			break;
+
+		case "yume":
+			partnerDescription.set('cost', '??');
+
+			partnerDescription.set('passive', 'When Yume is present, reduce Rage recovery of all enemies by *20*; increasing self defense penetration by **25%**');
+			partnerDescription.set('uniqueSkill', 'Attacks the enemy __team__ and deals **ATK*210%** damage; **8%** of DMG heals the Leader.');
+			partnerDescription.set('special',  'Attacks a __single__ enemy  and deals **ATK*165%** damage and increases self DEF penetration by **15%** during combat, can\'t stack');
+			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
+
+			partnerDescription.set('fourStar', 'TBD');
+			partnerDescription.set('fiveStar','TBD');
+			partnerDescription.set('sixStar', 'TBD');
+			break;
+
+		case "charlotte":
+			partnerDescription.set('cost', '13');
+
+			partnerDescription.set('passive', 'When Charlotte appears, reduces DEF RES of all enemy partners by **20%** for **2** rounds.');
+			partnerDescription.set('uniqueSkill', 'Attacks the enemy __team__ and deals **ATK*210%** damage; DMG increases by **X%** for each empty space.');
+			partnerDescription.set('special',  'Attacks a __single__ enemy  and deals **ATK*160%**');
+			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
+
+			partnerDescription.set('fourStar', 'TBD');
+			partnerDescription.set('fiveStar','TBD');
+			partnerDescription.set('sixStar', 'TBD');
+			break;
+
+		case "alina":
+			partnerDescription.set('cost', '16');
+
+			partnerDescription.set('passive', 'Alina increases her DMG Rate by **3%** for every buff she dispells, max **6** times.');
+			partnerDescription.set('uniqueSkill', 'Attacks the enemy __team__ and deals **ATK*210%** damage, dispelling **2** buffs at a time; Immunity buffs are prioritized.');
+			partnerDescription.set('special',  'Attacks a __single__ enemy  and deals **ATK*160%**');
+			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
+
+			partnerDescription.set('fourStar', 'TBD');
+			partnerDescription.set('fiveStar','TBD');
+			partnerDescription.set('sixStar', 'TBD');
 			break;
 		}
 
