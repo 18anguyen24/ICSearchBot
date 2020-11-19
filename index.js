@@ -1230,16 +1230,16 @@ function partnerDataBase(partner, typeToFind)
 			break;
 
 		case "yume":
-			partnerDescription.set('cost', '??');
+			partnerDescription.set('cost', '16');
 
-			partnerDescription.set('passive', 'When Yume is present, reduce Rage recovery of all enemies by **20**; increasing self defense penetration by **25%**');
-			partnerDescription.set('uniqueSkill', 'Attacks a __single__ enemy and deals **ATK*420%** damage and stealing **300** rage from the target. If the target\'s rage is 0 at this time, the target will be stunned for one round.');
+			partnerDescription.set('passive', 'When Yume is present, reduce Rage recovery of all enemies by **20**; increasing self DEF penetration by **25%**');
+			partnerDescription.set('uniqueSkill', 'Attacks a __single__ enemy and deals **ATK*420%** damage and stealing **100** rage from the target. If the target\'s rage is 0 at this time, the target will be stunned for one round.');
 			partnerDescription.set('special',  'Attacks a __single__ enemy  and deals **ATK*165%** damage and increases self DEF penetration by **15%** during combat, can\'t stack');
 			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
 
-			partnerDescription.set('fourStar', 'TBD');
-			partnerDescription.set('fiveStar','TBD');
-			partnerDescription.set('sixStar', 'TBD');
+			partnerDescription.set('fourStar', 'Steals 100(+200) Rage; increases basic HP by **20%**.');
+			partnerDescription.set('fiveStar','When Yume is on the field, increase allies DEF penetration by **25%**; Increase basic ATK by **20%**.');
+			partnerDescription.set('sixStar', 'Increases DEF penetration by 15% when Special is used; Chance to use Special Skill **+15%**.');
 			break;
 
 		case "natata":
@@ -1263,9 +1263,9 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('special',  'Attacks a __single__ enemy  and deals **ATK*160%**');
 			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
 
-			partnerDescription.set('fourStar', 'TBD');
-			partnerDescription.set('fiveStar','TBD');
-			partnerDescription.set('sixStar', 'TBD');
+			partnerDescription.set('fourStar', 'When Unique Skill is used, cleanses **2** debuffs from all allies; increases basic HP by **20%**.');
+			partnerDescription.set('fiveStar','DMG Rate increase per buff dispelled is now **5%**; Increase basic ATK by **20%**.');
+			partnerDescription.set('sixStar', 'When Special is used, heals the lowest health ally by **ATK*120%**; Chance to use Special Skill **+15%**.');
 			break;
 
 		case "brooke":
