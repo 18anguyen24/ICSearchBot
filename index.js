@@ -65,6 +65,8 @@ radiantIcons.set('yume', 'https://raw.githubusercontent.com/18anguyen24/ICSearch
 radiantIcons.set('natata', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/charlotte.JPG');
 radiantIcons.set('alena', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/alina.JPG');
 radiantIcons.set('brooke', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/brooke.JPG');
+radiantIcons.set('taka', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/taka.JPG');
+radiantIcons.set('ming', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/ming.JPG');
 
 let rarity = new Map();
 rarity.set('kasumi', 'SSR');
@@ -127,6 +129,8 @@ rarity.set('yume', 'SSR');
 rarity.set('natata', 'SSR');
 rarity.set('alena', 'SSR');
 rarity.set('brooke', 'SSR');
+rarity.set('taka', 'SSR');
+rarity.set('ming', 'SSR');
 
 let trueNames = new Map();
 trueNames.set('kasumi', 'Kasumi');
@@ -189,6 +193,8 @@ trueNames.set('yume', 'Yume');
 trueNames.set('natata', 'Natata');
 trueNames.set('alena', 'Alena');
 trueNames.set('brooke', 'Brooke');
+trueNames.set('taka', 'Taka');
+trueNames.set('ming', 'ming');
 
 client.once('ready', () => {
 	console.log('rd');
@@ -464,6 +470,8 @@ function findClass(name)
 	partnerClass.set('natata', 'sorcerer');
 	partnerClass.set('alena', 'sorcerer');
 	partnerClass.set('brooke', 'light');
+	partnerClass.set('taka', 'guardian');
+	partnerClass.set('ming', 'healer');
 
 	let trueClass = new Map();
 	trueClass.set('attack', 'https://www.illusionconnectgame.com/images/temp200821/public/Attack.png');
@@ -1270,6 +1278,31 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('fiveStar','Increases chance of proccing Unique Skill from healing by **5%**; Increases basic ATK by **20%**.');
 			partnerDescription.set('sixStar', 'Grants a random ally a shield equal to **10%** of their max HP; Chance to use Special Skill **+15%**.');
 			break;
+
+		case "taka":
+			partnerDescription.set('cost', '16');
+
+			partnerDescription.set('passive', 'When Taka is present, all Guardians\' reflect rate is increased by **30%**. ');
+			partnerDescription.set('uniqueSkill', 'All allies instantly launch a **1** round attack, and reduces the cost of a random Guardian in hand by **4**.');
+			partnerDescription.set('special',  'Attacks a __single__ enemy  and deals **ATK*162%**, also dealing **30%** splash damage to the enemy with the lowest health.');
+			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
+
+			partnerDescription.set('fourStar', 'Grants all Guardian allies on the field a **2** turn taunt; Increase basic HP by **20%**.');
+			partnerDescription.set('fiveStar','Reflect Rate becomes **50%**; Increases basic ATK by **20%**.');
+			partnerDescription.set('sixStar', 'Splash DMG increases to **60%**; Chance to use Special Skill **+15%**.');
+			break;
+
+		case "ming":
+			partnerDescription.set('cost', '16');
+
+			partnerDescription.set('passive', 'When Ming is present, Ming restores **10%** HP Max to allies after their own actions. Ming and Guardian allies get double the healing amount.');
+			partnerDescription.set('uniqueSkill', 'Restore HP equal to **ATK*220%** to all allies and increases their DEF by **25%**');
+			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*180%** damage.');
+			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
+
+			partnerDescription.set('fourStar', 'Restores HP equal to **ATK*220% (+60%)**; increases number of targets by **1**; Increase basic HP by **20%**.');
+			partnerDescription.set('fiveStar','Passive healing increased to **15%**; Increases basic ATK by **20%**.');
+			partnerDescription.set('sixStar', 'Removes **1** ally debuff; Chance to use Special Skill **+15%**.');
 		}
 
 	return partnerDescription.get(typeToFind);
