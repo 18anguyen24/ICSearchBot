@@ -64,6 +64,7 @@ radiantIcons.set('madhatter', 'https://raw.githubusercontent.com/18anguyen24/ICS
 radiantIcons.set('yume', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/yume.JPG');
 radiantIcons.set('natata', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/charlotte.JPG');
 radiantIcons.set('alena', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/alina.JPG');
+radiantIcons.set('brooke', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/brooke.JPG');
 
 let rarity = new Map();
 rarity.set('kasumi', 'SSR');
@@ -125,6 +126,7 @@ rarity.set('madhatter', 'SR');
 rarity.set('yume', 'SSR');
 rarity.set('natata', 'SSR');
 rarity.set('alena', 'SSR');
+rarity.set('brooke', 'SSR');
 
 let trueNames = new Map();
 trueNames.set('kasumi', 'Kasumi');
@@ -186,6 +188,7 @@ trueNames.set('madhatter', 'Mad Hatter');
 trueNames.set('yume', 'Yume');
 trueNames.set('natata', 'Natata');
 trueNames.set('alena', 'Alena');
+trueNames.set('brooke', 'Brooke');
 
 client.once('ready', () => {
 	console.log('rd');
@@ -211,7 +214,8 @@ client.on('message', async message =>
 			"\n\n **!banner** " +
 			"\n Displays link to banner from #guide." +
 			"\n\n **!skins** " +
-			"\n Displays link to (most)future skins possible from the KR server.";
+			"\n Displays link to (most)future skins possible from the KR server."
+			"\n\n\n KR FUTURE UNITS' TRANSLATION CREDITS GO TO @Hyou#5070 AND @MEKA#6993";
         message.channel.send(str);
 	}
 	
@@ -457,8 +461,9 @@ function findClass(name)
 	partnerClass.set('astaroth', 'spell');
 	partnerClass.set('madhatter', 'summon');
 	partnerClass.set('yume', 'attack');
-	partnerClass.set('charlotte', 'sorcerer');
-	partnerClass.set('alina', 'sorcerer');
+	partnerClass.set('natata', 'sorcerer');
+	partnerClass.set('alena', 'sorcerer');
+	partnerClass.set('brooke', 'light');
 
 	let trueClass = new Map();
 	trueClass.set('attack', 'https://www.illusionconnectgame.com/images/temp200821/public/Attack.png');
@@ -1251,6 +1256,19 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('fourStar', 'TBD');
 			partnerDescription.set('fiveStar','TBD');
 			partnerDescription.set('sixStar', 'TBD');
+			break;
+
+		case "brooke":
+			partnerDescription.set('cost', '16');
+
+			partnerDescription.set('passive', 'When Brooke is healed, she has a **20%** chance to use her Unique Skill.');
+			partnerDescription.set('uniqueSkill', 'Attacks an enemy __row__ and deals **ATK*240%**; For each Guardian ally hit, increases the DMG of this skill by **30%**.');
+			partnerDescription.set('special',  'Attacks a __single__ enemy  and deals **ATK*180%**');
+			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
+
+			partnerDescription.set('fourStar', 'Deals damage equal to **ATK*240% (+70%)**; Increase basic HP by **20%**.');
+			partnerDescription.set('fiveStar','Increases chance of proccing Unique Skill from healing by **5%**; Increases basic ATK by **20%**.');
+			partnerDescription.set('sixStar', 'Grants a random ally a shield equal to **10%** of their max HP; Chance to use Special Skill **+15%**.');
 			break;
 		}
 
