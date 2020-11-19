@@ -471,7 +471,7 @@ function findClass(name)
 	partnerClass.set('alena', 'sorcerer');
 	partnerClass.set('brooke', 'light');
 	partnerClass.set('taka', 'guardian');
-	partnerClass.set('ming', 'healer');
+	partnerClass.set('ming', 'heal');
 
 	let trueClass = new Map();
 	trueClass.set('attack', 'https://www.illusionconnectgame.com/images/temp200821/public/Attack.png');
