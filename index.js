@@ -214,7 +214,7 @@ client.on('message', async message =>
 			"\n\n **!banner** " +
 			"\n Displays link to banner from #guide." +
 			"\n\n **!skins** " +
-			"\n Displays link to (most)future skins possible from the KR server."
+			"\n Displays link to (most)future skins possible from the KR server." +
 			"\n\n\n KR FUTURE UNITS' TRANSLATION CREDITS GO TO @Hyou#5070 AND @MEKA#6993";
         message.channel.send(str);
 	}
