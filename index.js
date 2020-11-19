@@ -1271,7 +1271,7 @@ function partnerDataBase(partner, typeToFind)
 		case "brooke":
 			partnerDescription.set('cost', '16');
 
-			partnerDescription.set('passive', 'When Brooke is healed, she has a **20%** chance to use her Unique Skill.');
+			partnerDescription.set('passive', 'When Brooke is healed, she has a **20%** chance to use her Unique Skill(deals half damage when procced through this effect).');
 			partnerDescription.set('uniqueSkill', 'Attacks an enemy __row__ and deals **ATK*240%**; For each Guardian ally hit, increases the DMG of this skill by **30%**.');
 			partnerDescription.set('special',  'Attacks a __single__ enemy  and deals **ATK*180%**');
 			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
