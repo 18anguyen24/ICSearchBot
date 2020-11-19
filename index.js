@@ -62,8 +62,8 @@ radiantIcons.set('mia', 'https://raw.githubusercontent.com/18anguyen24/ICSearchB
 radiantIcons.set('astaroth', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/astaroth.JPG');
 radiantIcons.set('madhatter', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/sr/mad_hatter.JPG');
 radiantIcons.set('yume', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/yume.JPG');
-radiantIcons.set('charlotte', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/charlotte.JPG');
-radiantIcons.set('alina', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/alina.JPG');
+radiantIcons.set('natata', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/charlotte.JPG');
+radiantIcons.set('alena', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/alina.JPG');
 
 let rarity = new Map();
 rarity.set('kasumi', 'SSR');
@@ -123,8 +123,8 @@ rarity.set('mia', 'R');
 rarity.set('astaroth', 'SSR');
 rarity.set('madhatter', 'SR');
 rarity.set('yume', 'SSR');
-rarity.set('charlotte', 'SSR');
-rarity.set('alina', 'SSR');
+rarity.set('natata', 'SSR');
+rarity.set('alena', 'SSR');
 
 let trueNames = new Map();
 trueNames.set('kasumi', 'Kasumi');
@@ -184,8 +184,8 @@ trueNames.set('mia', 'Mia');
 trueNames.set('astaroth', 'Astaroth');
 trueNames.set('madhatter', 'Mad Hatter');
 trueNames.set('yume', 'Yume');
-trueNames.set('charlotte', 'Charlotte');
-trueNames.set('alina', 'Alina');
+trueNames.set('natata', 'Natata');
+trueNames.set('alena', 'Alena');
 
 client.once('ready', () => {
 	console.log('rd');
@@ -1227,10 +1227,10 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('sixStar', 'TBD');
 			break;
 
-		case "charlotte":
+		case "natata":
 			partnerDescription.set('cost', '13');
 
-			partnerDescription.set('passive', 'When Charlotte appears, reduces DEF RES of all enemy partners by **20%** for **2** rounds.');
+			partnerDescription.set('passive', 'When Natata appears, reduces DMG RATE of all enemy partners by **20%** for **2** rounds.');
 			partnerDescription.set('uniqueSkill', 'Attacks the enemy __team__ and deals **ATK*210%** damage; DMG increases by **X%** for each empty space.');
 			partnerDescription.set('special',  'Attacks a __single__ enemy  and deals **ATK*160%**');
 			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
@@ -1240,10 +1240,10 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('sixStar', 'TBD');
 			break;
 
-		case "alina":
+		case "alena":
 			partnerDescription.set('cost', '16');
 
-			partnerDescription.set('passive', 'Alina increases her DMG Rate by **3%** for every buff she dispells, max **6** times.');
+			partnerDescription.set('passive', 'Alena increases her DMG Rate by **3%** for every buff she dispells, max **6** times.');
 			partnerDescription.set('uniqueSkill', 'Attacks the enemy __team__ and deals **ATK*210%** damage, dispelling **2** buffs at a time; Immunity buffs are prioritized.');
 			partnerDescription.set('special',  'Attacks a __single__ enemy  and deals **ATK*160%**');
 			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
