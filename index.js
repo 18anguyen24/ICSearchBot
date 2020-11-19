@@ -194,7 +194,7 @@ trueNames.set('natata', 'Natata');
 trueNames.set('alena', 'Alena');
 trueNames.set('brooke', 'Brooke');
 trueNames.set('taka', 'Taka');
-trueNames.set('ming', 'ming');
+trueNames.set('ming', 'Ming');
 
 client.once('ready', () => {
 	console.log('rd');
@@ -497,9 +497,9 @@ function partnerLineup(partner)
 	partnerLineSkill.set('yuffie', '**[Activation Requirement]** Deploy at least **5** Sorcerer class partners. \n**[Activation Effect]** Ally partners of Sorcerer class deal **20%** additional DMG to enemy partners');
 	partnerLineSkill.set('anna', '**[Activation Requirement]** Deploy at least **5** partners of different classes. \n**[Activation Effect]** When Anna is present, grants herself and allied partners deployed after Anna **10%** DMG Rate and **10%** DMG RES Rate.');
 	partnerLineSkill.set('jasmine', '**[Activation Requirement]** No more than **2** partners of any one Energy cost on the Team. \n**[Activation Effect]** After every action, Jasmine restores **20%** HP Max to Ally partner with the lowest HP.');
-	partnerLineSkill.set('phoebe', '**[Activation Requirement]** Deploy at least **5** Light or Healing class partners. \n[Activation Effect] When Phoebe appears, she grants Invincible status to **3** random Ally units, lasts **20** seconds.');
-	partnerLineSkill.set('ann', '**[Activation Requirement]** No more than **2** partners of any one Energy cost on the Team. \n[Activation Effect] Mermaid Princess and Snow Queen increase HP Max by **60%**.');
-	partnerLineSkill.set('taka', '**[Activation Requirement]** Deploy at least **4** Guardian allies. \n[Activation Effect] When an Ally partner appears, **1** random Tank partner gains **500** rage.');
+	partnerLineSkill.set('phoebe', '**[Activation Requirement]** Deploy at least **5** Light or Healing class partners. \n**[Activation Effect]** When Phoebe appears, she grants Invincible status to **3** random Ally units, lasts **20** seconds.');
+	partnerLineSkill.set('ann', '**[Activation Requirement]** No more than **2** partners of any one Energy cost on the Team. \n**[Activation Effect]** Mermaid Princess and Snow Queen increase HP Max by **60%**.');
+	partnerLineSkill.set('taka', '**[Activation Requirement]** Deploy at least **4** Guardian allies. \n**[Activation Effect]** When an Ally partner appears, **1** random Guardian ally gains **500** rage.');
 
 
 	if(partnerLineSkill.has(partner))
