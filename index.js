@@ -1278,7 +1278,7 @@ function partnerDataBase(partner, typeToFind)
 
 			partnerDescription.set('fourStar', 'Deals damage equal to **ATK*240% (+70%)**; Increase basic HP by **20%**.');
 			partnerDescription.set('fiveStar','Increases chance of proccing Unique Skill from healing by **5%**; Increases basic ATK by **20%**.');
-			partnerDescription.set('sixStar', 'Grants a random ally a shield equal to **10%** of their max HP; Chance to use Special Skill **+15%**.');
+			partnerDescription.set('sixStar', 'Grants a random ally a shield equal to **10%** of her own max HP; Chance to use Special Skill **+15%**.');
 			break;
 
 		case "taka":
