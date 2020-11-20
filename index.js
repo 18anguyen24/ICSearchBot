@@ -1233,11 +1233,11 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('cost', '16');
 
 			partnerDescription.set('passive', 'When Yume is present, reduce Rage recovery of all enemies by **20**; increasing self DEF penetration by **25%**');
-			partnerDescription.set('uniqueSkill', 'Attacks a __single__ enemy and deals **ATK*420%** damage and stealing **100** rage from the target. If the target\'s rage is 0 at this time, the target will be stunned for one round.');
+			partnerDescription.set('uniqueSkill', 'Attacks a __single__ enemy and deals **ATK*420%** damage and stealing **200** rage from the target. If the target\'s rage is 0 at this time, the target will be stunned for one round.');
 			partnerDescription.set('special',  'Attacks a __single__ enemy  and deals **ATK*165%** damage.');
 			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
 
-			partnerDescription.set('fourStar', 'Steals 100(+200) Rage; increases basic HP by **20%**.');
+			partnerDescription.set('fourStar', 'Steals 200(+100) Rage; increases basic HP by **20%**.');
 			partnerDescription.set('fiveStar','When Yume is on the field, increase allies DEF penetration by **25%**; Increase basic ATK by **20%**.');
 			partnerDescription.set('sixStar', 'Increases DEF penetration by **15%** when Special is used in combat, cannot stack.; Chance to use Special Skill **+15%**.');
 			break;
