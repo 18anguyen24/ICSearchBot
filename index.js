@@ -1045,8 +1045,8 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('cost', '17');
 
 			partnerDescription.set('passive', 'When a Wandering Nightmare dies, **100%** ATK DMG is dealt to enemy Sorcerer partners.');
-			partnerDescription.set('uniqueSkill', 'Attacks a __single__ enemy and deals **ATK*240%** damage.');
-			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*105%** damage.');
+			partnerDescription.set('uniqueSkill', 'Summons wandering nightmares that populate all empty spaces on your field. They inherit **95%** of Ashwaya\'s ATK, **0%** of her DEF and **50%** of her HP');
+			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*240%** damage.');
 			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
 
 			partnerDescription.set('fourStar', 'Inherits **95% (+25%)** ATK from Ashwaya; Increases basic HP by **20%**.');
