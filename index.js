@@ -1312,6 +1312,7 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('fourStar', 'Restores HP equal to **ATK*220% (+65%)**; Increase basic HP by **20%**.');
 			partnerDescription.set('fiveStar','Passive healing increased to **15%**; Increases basic ATK by **20%**.');
 			partnerDescription.set('sixStar', 'Removes **1** ally debuff; Chance to use Special Skill **+15%**.');
+			break;
 
 		case "okuni":
 			partnerDescription.set('cost', '15');
