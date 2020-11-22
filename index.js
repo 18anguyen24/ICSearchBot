@@ -67,6 +67,8 @@ radiantIcons.set('alena', 'https://raw.githubusercontent.com/18anguyen24/ICSearc
 radiantIcons.set('brooke', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/brooke.JPG');
 radiantIcons.set('taka', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/taka.JPG');
 radiantIcons.set('ming', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/ming.JPG');
+radiantIcons.set('ming', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/okuni.JPG');
+
 
 let rarity = new Map();
 rarity.set('kasumi', 'SSR');
@@ -131,6 +133,7 @@ rarity.set('alena', 'SSR');
 rarity.set('brooke', 'SSR');
 rarity.set('taka', 'SSR');
 rarity.set('ming', 'SSR');
+rarity.set('okuni', 'SSR');
 
 let trueNames = new Map();
 trueNames.set('kasumi', 'Kasumi');
@@ -195,6 +198,7 @@ trueNames.set('alena', 'Alena');
 trueNames.set('brooke', 'Brooke');
 trueNames.set('taka', 'Taka');
 trueNames.set('ming', 'Ming');
+trueNames.set('okuni', 'Okuni');
 
 client.once('ready', () => {
 	console.log('rd');
@@ -472,6 +476,8 @@ function findClass(name)
 	partnerClass.set('brooke', 'light');
 	partnerClass.set('taka', 'guardian');
 	partnerClass.set('ming', 'heal');
+	partnerClass.set('okuni', 'light');
+
 
 	let trueClass = new Map();
 	trueClass.set('attack', 'https://www.illusionconnectgame.com/images/temp200821/public/Attack.png');
@@ -500,6 +506,7 @@ function partnerLineup(partner)
 	partnerLineSkill.set('phoebe', '**[Activation Requirement]** Deploy at least **5** Light or Healing class partners. \n**[Activation Effect]** When Phoebe appears, she grants Invincible status to **3** random Ally units, lasts **20** seconds.');
 	partnerLineSkill.set('ann', '**[Activation Requirement]** No more than **2** partners of any one Energy cost on the Team. \n**[Activation Effect]** Mermaid Princess and Snow Queen increase HP Max by **60%**.');
 	partnerLineSkill.set('taka', '**[Activation Requirement]** Deploy at least **4** Guardian allies. \n**[Activation Effect]** When an Ally partner appears, **1** random Guardian ally gains **500** rage.');
+	partnerLineSkill.set('okuni', '**[Activation Requirement]** Deploy at least **6** Guardian or Light allies. \n**[Activation Effect]** All Guardian allies gain a shield equal to **100%** of Okuni\'s max HP.');
 
 
 	if(partnerLineSkill.has(partner))
@@ -1003,7 +1010,7 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('special',  'Attacks an enemy __column__ and deals **ATK*168%** damage.');
 			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
 
-			partnerDescription.set('fourStar', 'Deals damage equal to **TK*265% (+65%)**; Increases basic HP by **20%**.');
+			partnerDescription.set('fourStar', 'Deals damage equal to **ATK*265% (+65%)**; Increases basic HP by **20%**.');
 			partnerDescription.set('fiveStar','Increases DMG Rate by 15%; deals **ATK*132% (+18%)** damage when the fox dies; Increase basic ATK by **20%**.');
 			partnerDescription.set('sixStar', 'Summons a spirit fox that inherits Gagaku\'s ATK by **100%** but with only **1** HP; Chance to use Special Skill **+15%**.');
 			break;
@@ -1016,9 +1023,9 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('special',  'Attacks an enemy __column__ and deals **ATK*168%** damage.');
 			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
 
-			partnerDescription.set('fourStar', 'TBD');
-			partnerDescription.set('fiveStar','TBD');
-			partnerDescription.set('sixStar', 'TBD');
+			partnerDescription.set('fourStar', 'Deals damage equal to **ATK*475% (+115%)**; Increases basic HP by **20%**.');
+			partnerDescription.set('fiveStar','Increases ATK by **5.5%** and max HP by **11%**; Increasesbasic ATK by **20%**.');
+			partnerDescription.set('sixStar', 'Increases **CRIT** Rate by **15%** when attacking; Chance to use Special Skill **+15%**.');
 			break;
 
 		case "ann":
@@ -1250,9 +1257,9 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('special',  'Attacks a __single__ enemy  and deals **ATK*160%**');
 			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
 
-			partnerDescription.set('fourStar', 'TBD');
-			partnerDescription.set('fiveStar','TBD');
-			partnerDescription.set('sixStar', 'TBD');
+			partnerDescription.set('fourStar', 'Deals damage equal to **ATK*210% (+50%)**; increases basic HP by **20%**.');
+			partnerDescription.set('fiveStar','Reduces enemy DMG RATE by an additional **20%**; Increase basic ATK by **20%**.');
+			partnerDescription.set('sixStar', 'Reduces enemy ATK by **40%** for **2** rounds when attacking; Chance to use Special Skill **+15%**.');
 			break;
 
 		case "alena":
@@ -1305,6 +1312,19 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('fourStar', 'Restores HP equal to **ATK*220% (+65%)**; Increase basic HP by **20%**.');
 			partnerDescription.set('fiveStar','Passive healing increased to **15%**; Increases basic ATK by **20%**.');
 			partnerDescription.set('sixStar', 'Removes **1** ally debuff; Chance to use Special Skill **+15%**.');
+
+		case "okuni":
+			partnerDescription.set('cost', '15');
+
+			partnerDescription.set('passive', 'Okuni reduces all single target DMG dealt to her by **30%**.');
+			partnerDescription.set('uniqueSkill', 'Attacks the enemy __team__ and deals **ATK*210%** damage and gains **150** Rage for each enemy hit(MAX **450**).');
+			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*168%** damage.');
+			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
+
+			partnerDescription.set('fourStar', 'Deals damage equal to **ATK*210% (+50%)**; Increase basic HP by **20%**.');
+			partnerDescription.set('fiveStar','Reduces single target DMG dealt to her by **40%** instead; Increases basic ATK by **20%**.');
+			partnerDescription.set('sixStar', 'Grants two random allies a **100%** chance to proc their Specials for **1** turn; Chance to use Special Skill **+15%**.');
+			break;
 		}
 
 	return partnerDescription.get(typeToFind);
