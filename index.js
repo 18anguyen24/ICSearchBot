@@ -506,7 +506,7 @@ function partnerLineup(partner)
 	partnerLineSkill.set('phoebe', '**[Activation Requirement]** Deploy at least **5** Light or Healing class partners. \n**[Activation Effect]** When Phoebe appears, she grants Invincible status to **3** random Ally units, lasts **20** seconds.');
 	partnerLineSkill.set('ann', '**[Activation Requirement]** No more than **2** partners of any one Energy cost on the Team. \n**[Activation Effect]** Mermaid Princess and Snow Queen increase HP Max by **60%**.');
 	partnerLineSkill.set('taka', '**[Activation Requirement]** Deploy at least **4** Guardian allies. \n**[Activation Effect]** When an Ally partner appears, **1** random Guardian ally gains **500** rage.');
-	partnerLineSkill.set('okuni', '**[Activation Requirement]** Deploy at least **6** Guardian or Light allies. \n**[Activation Effect]** All Guardian allies gain a shield equal to **100%** of Okuni\'s max HP.');
+	partnerLineSkill.set('okuni', '**[Activation Requirement]** Deploy at least **6** Guardian or Light allies. \n**[Activation Effect]** All Guardian allies gain a shield equal to **100%** of their max HP.');
 
 
 	if(partnerLineSkill.has(partner))
