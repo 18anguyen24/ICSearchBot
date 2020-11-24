@@ -68,6 +68,11 @@ radiantIcons.set('brooke', 'https://raw.githubusercontent.com/18anguyen24/ICSear
 radiantIcons.set('taka', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/taka.JPG');
 radiantIcons.set('ming', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/ming.JPG');
 radiantIcons.set('okuni', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/okuni.JPG');
+radiantIcons.set('okuni', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/sakura.JPG');
+radiantIcons.set('okuni', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/junko.JPG');
+radiantIcons.set('okuni', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/ai.JPG');
+
+
 
 
 let rarity = new Map();
@@ -134,6 +139,9 @@ rarity.set('brooke', 'SSR');
 rarity.set('taka', 'SSR');
 rarity.set('ming', 'SSR');
 rarity.set('okuni', 'SSR');
+rarity.set('sakura', 'SSR');
+rarity.set('junko', 'SSR');
+rarity.set('ai', 'SSR');
 
 let trueNames = new Map();
 trueNames.set('kasumi', 'Kasumi');
@@ -199,6 +207,9 @@ trueNames.set('brooke', 'Brooke');
 trueNames.set('taka', 'Taka');
 trueNames.set('ming', 'Ming');
 trueNames.set('okuni', 'Okuni');
+trueNames.set('sakura', 'Sakura Minamoto');
+trueNames.set('junko', 'Junko Konno');
+trueNames.set('ai', 'Ai Mizuno');
 
 client.once('ready', () => {
 	console.log('rd');
@@ -477,6 +488,10 @@ function findClass(name)
 	partnerClass.set('taka', 'guardian');
 	partnerClass.set('ming', 'heal');
 	partnerClass.set('okuni', 'light');
+	partnerClass.set('junko', 'heal');
+	partnerClass.set('ai', 'sorcerer');
+	partnerClass.set('sakura', 'spell');
+
 
 
 	let trueClass = new Map();
@@ -507,6 +522,9 @@ function partnerLineup(partner)
 	partnerLineSkill.set('ann', '**[Activation Requirement]** No more than **2** partners of any one Energy cost on the Team. \n**[Activation Effect]** Mermaid Princess and Snow Queen increase HP Max by **60%**.');
 	partnerLineSkill.set('taka', '**[Activation Requirement]** Deploy at least **4** Guardian allies. \n**[Activation Effect]** When an Ally partner appears, **1** random Guardian ally gains **500** rage.');
 	partnerLineSkill.set('okuni', '**[Activation Requirement]** Deploy at least **6** Guardian or Light allies. \n**[Activation Effect]** All Guardian allies gain a shield equal to **100%** of their max HP.');
+	partnerLineSkill.set('sakura', '**[Activation Requirement]** Junko Konno and Ai Mizuno are in the team. \n**[Activation Effect]** Whenever Sakura attacks, Junko and Ai will also launch an attack.');
+	partnerLineSkill.set('ai', '**[Activation Requirement]** Sakura Minamoto and Junko Konno are in the team. \n**[Activation Effect]** Whenever Ai attacks, Sakura and Junko will also launch an attack.');
+	partnerLineSkill.set('junko', '**[Activation Requirement]** Sakura Minamoto and Ai Mizuno are in the team. \n**[Activation Effect]** Whenever Junko attacks, Sakura and Ai will also launch an attack.');
 
 
 	if(partnerLineSkill.has(partner))
@@ -1325,6 +1343,45 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('fourStar', 'Deals damage equal to **ATK*210% (+50%)**; Increase basic HP by **20%**.');
 			partnerDescription.set('fiveStar','Reduces single target DMG dealt to her by **40%** instead; Increases basic ATK by **20%**.');
 			partnerDescription.set('sixStar', 'Grants two random allies a **100%** chance to proc their Specials for **1** turn; Chance to use Special Skill **+15%**.');
+			break;
+
+		case "junko":
+			partnerDescription.set('cost', '13');
+
+			partnerDescription.set('passive', 'When Junko dies, she is resurrected as a zombie and receives 100% ATK, 100% DEF, and 100% HP, but she can only cast normal attacks. Triggers only once.');
+			partnerDescription.set('uniqueSkill', 'Attacks the enemy with the __lowest__ HP and deals **ATK*260%** damage.  \nIf the enemy\'s energy is > or = to 14, inflicts **Acrophobia**(Increases DMG taken by **100%**, does not affect enemy Leaders). \nHeals the two lowest HP allies for **ATK*120%**.');
+			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*150%** damage, reducing their Heal rate by **40%**.');
+			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
+
+			partnerDescription.set('fourStar', 'TBD');
+			partnerDescription.set('fiveStar','TBD');
+			partnerDescription.set('sixStar', 'TBD');
+			break;
+
+		case "sakura":
+			partnerDescription.set('cost', '15');
+
+			partnerDescription.set('passive', 'When Sakura dies, she is resurrected as a zombie and receives 100% ATK, 100% DEF, and 100% HP, but she can only cast normal attacks. Triggers only once.');
+			partnerDescription.set('uniqueSkill', 'Attacks the enemy __team__ and deals **ATK*210%** damage.  All targets are inflicted with **Bad Luck**(Take **ATK*60%** DMG after every action). \nEnemies hit will also either recieve a __silence__ or suffer an ATK or DEF reduction of **30%** for **1** round.');
+			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*150%** damage, reducing their DMG rate by **20%**.');
+			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
+
+			partnerDescription.set('fourStar', 'TBD');
+			partnerDescription.set('fiveStar','TBD');
+			partnerDescription.set('sixStar', 'TBD');
+			break;
+
+		case "ai":
+			partnerDescription.set('cost', '16');
+
+			partnerDescription.set('passive', 'When Ai dies, she is resurrected as a zombie and receives 100% ATK, 100% DEF, and 100% HP, but she can only cast normal attacks. Triggers only once.');
+			partnerDescription.set('uniqueSkill', 'Attacks an enemy __row__ and deals **ATK*280%** damage. Targets hit will have a **50%** chance to be stunned for **1** round. \nAdditionally, for each enemy hit in the __row__, deal **ATK*120%** to a random enemy(max 3).');
+			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*150%** damage, reducing their DEF by **20%**.');
+			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
+
+			partnerDescription.set('fourStar', 'TBD');
+			partnerDescription.set('fiveStar','TBD');
+			partnerDescription.set('sixStar', 'TBD');
 			break;
 		}
 
