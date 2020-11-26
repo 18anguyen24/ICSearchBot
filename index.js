@@ -1362,7 +1362,7 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('cost', '15');
 
 			partnerDescription.set('passive', 'When Sakura dies, she is resurrected as a zombie and receives 100% ATK, 100% DEF, and 100% HP, but she can only cast normal attacks. Triggers only once.');
-			partnerDescription.set('uniqueSkill', 'Attacks the enemy __team__ and deals **ATK*210%** damage.  All targets are inflicted with **Bad Luck**(Take **ATK*60%** DMG after every action). \nEnemies hit will also either recieve a __silence__ or suffer an ATK or DEF reduction of **30%** for **1** round.');
+			partnerDescription.set('uniqueSkill', 'Attacks the enemy __team__ and deals **ATK*210%** damage.  All targets are inflicted with **Bad Luck**(Take **ATK*60%** DMG after every action). \nEnemies hit will also either recieve a __silence__, __stun__, or suffer an ATK or DEF reduction of **30%** for **1** round.');
 			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*150%** damage, reducing their DMG rate by **20%**.');
 			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
 
