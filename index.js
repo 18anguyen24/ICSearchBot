@@ -1322,7 +1322,7 @@ function partnerDataBase(partner, typeToFind)
 		case "ming":
 			partnerDescription.set('cost', '16');
 
-			partnerDescription.set('passive', 'When Ming is present, Ming restores **10%**  of her own HP Max to allies after their own actions. Ming and Guardian allies get double the healing amount.');
+			partnerDescription.set('passive', 'When Ming is present, allies restore **10%** of their max HP after their actions. Ming and Guardian allies get double the healing amount.');
 			partnerDescription.set('uniqueSkill', 'Restore HP equal to **ATK*220%** to all allies and increases their DEF by **25%**');
 			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*180%** damage.');
 			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
