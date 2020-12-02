@@ -548,7 +548,7 @@ function partnerLineup(partner)
 function awakenSkill(partner)
 {
 	let partnerAwakenSkill = new Map();
-	partnerAwakenSkill.set('maki', 'Deals damage equal to **ATK*500% (+50%)**; Increase DMG Rate and DMG Res Rate by **20%**.');
+	partnerAwakenSkill.set('maki', 'Deals damage equal to **ATK*500% (+50%)**; \nIncrease DMG Rate and DMG Res Rate by **20%**.');
 
 	if(partnerAwakenSkill.has(partner))
 	{
