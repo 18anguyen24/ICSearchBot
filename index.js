@@ -57,16 +57,16 @@ radiantIcons.set('nanalie', 'https://raw.githubusercontent.com/18anguyen24/ICSea
 radiantIcons.set('polly', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/r/polly.png');
 radiantIcons.set('rie', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/r/rie.png');
 radiantIcons.set('shanti', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/r/shanti.png');
-radiantIcons.set('mary', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/r/mary.png');
-radiantIcons.set('mia', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/r/mia.png');
+radiantIcons.set('mary', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/r/mary.jpg');
+radiantIcons.set('mia', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/r/mia.jpg');
 radiantIcons.set('astaroth', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/astaroth.JPG');
 radiantIcons.set('madhatter', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/sr/mad_hatter.JPG');
 radiantIcons.set('yume', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/yume.JPG');
 radiantIcons.set('natata', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/charlotte.JPG');
 radiantIcons.set('alena', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/alina.JPG');
-radiantIcons.set('brooke', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/brooke.JPG');
+radiantIcons.set('brooke', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/brooke1.JPG');
 radiantIcons.set('taka', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/taka.JPG');
-radiantIcons.set('ming', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/ming.JPG');
+radiantIcons.set('ming', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/ming1.JPG');
 radiantIcons.set('okuni', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/okuni.JPG');
 radiantIcons.set('sakura', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/sakura1.JPG');
 radiantIcons.set('junko', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/junko1.JPG');
@@ -260,12 +260,22 @@ client.on('message', async message =>
 		message.channel.send(embed);
 	}
 
+	if (command === 'wiki')
+	{
+		const embed = new MessageEmbed()
+			.setTitle('Link to wiki')
+			.setColor('#FE8300')
+			.setURL('https://illusionconnectwiki.com/wiki/characters');
+
+		message.channel.send(embed);
+	}
+
 	if (command === 'skins')
 	{
 		const embed = new MessageEmbed()
-			.setTitle('Skins to date from the KR server')
+			.setTitle('Skins to date from the wiki')
 			.setColor('#0AFF02')
-			.setURL('https://gall.dcinside.com/mgallery/board/view/?id=illusionconnect&no=87643');
+			.setURL('https://illusionconnectwiki.com/art/categories/official-skins.7/');
 
 		message.channel.send(embed);
 	}
