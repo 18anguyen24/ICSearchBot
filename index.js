@@ -334,13 +334,7 @@ client.on('message', async message =>
 							inline: true,
 						},
 					)
-					.addFields(
-						{
-							name: ':star:**AWAKENING**:star:',
-							value: awakenSkill(partner),
-							inline: true,
-						}
-					);
+					.addField(':star:**AWAKENING**:star:', awakenSkill(partner));
 					message.channel.send(embed);
 			}
 			else if(rarity.get(name) === "SR")
