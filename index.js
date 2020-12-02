@@ -333,6 +333,13 @@ client.on('message', async message =>
 							value: partnerDataBase(name, 'sixStar'),
 							inline: true,
 						},
+					)
+					.addFields(
+						{
+							name: ':star:**AWAKENING**:star:',
+							value: awakenSkill(partner),
+							inline: true,
+						}
 					);
 					message.channel.send(embed);
 			}
@@ -542,6 +549,18 @@ function partnerLineup(partner)
 		return partnerLineSkill.get(partner);
 	}
 	return 'No Lineup Skill found.';
+}
+
+function awakenSkill(partner)
+{
+	let partnerAwakenSkill = new Map();
+	partnerAwakenSkill.set('maki', 'Deals damage equal to **ATK*500% (+50%)**; Increase DMG Rate and DMG Res Rate by **20%**.');
+
+	if(partnerAwakenSkill.has(partner))
+	{
+		return partnerAwakenSkill.get(partner);
+	}
+	return 'No Awakening found for this partner.';
 }
 
 function partnerDataBase(partner, typeToFind) 
