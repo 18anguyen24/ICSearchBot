@@ -235,7 +235,9 @@ client.on('message', async message =>
 			"\n\n **!banner** " +
 			"\n Displays link to banner from #guide." +
 			"\n\n **!skins** " +
-			"\n Displays link to (most)future skins possible from the KR server." +
+			"\n Displays link to (most)future skins possible from wiki." +
+			"\n **!wiki**" +
+			"\n Displays link to the wiki." +
 			"\n\n\n KR FUTURE UNITS' TRANSLATION CREDITS GO TO @Hyou#5070 AND @MEKA#6993";
         message.channel.send(str);
 	}
@@ -263,7 +265,7 @@ client.on('message', async message =>
 	if (command === 'wiki')
 	{
 		const embed = new MessageEmbed()
-			.setTitle('Link to wiki')
+			.setTitle('Link to the wiki, displaying all possible characters.')
 			.setColor('#FE8300')
 			.setURL('https://illusionconnectwiki.com/wiki/characters');
 
