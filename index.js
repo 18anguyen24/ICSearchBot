@@ -781,9 +781,9 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('special',  'Attacks an enemy __column__ and deals **ATK*120%** damage.');
 			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
 
-			partnerDescription.set('fourStar', 'Deals Damage equal to **ATK*400% (+100%)**; Increases basic HP by **20%**.');
-			partnerDescription.set('fiveStar','Increases Block Rate by **15%**; Increase basic ATK by **20%**.');
-			partnerDescription.set('sixStar', 'Increase Block Rate by **20%** after taking action; Chance to use Special Skill **+15%**.');
+			partnerDescription.set('fourStar', 'Deals Damage equal to **ATK*240% (+60%)**; Increases basic HP by **20%**.');
+			partnerDescription.set('fiveStar','Deals **33%** more Damage to Guardian enemies; Increase basic ATK by **20%**.');
+			partnerDescription.set('sixStar', 'Increases Life Steal Rate by **50%** after taking action; Chance to use Special Skill **+15%**.');
 			break;
 
 		case "sachiko":
