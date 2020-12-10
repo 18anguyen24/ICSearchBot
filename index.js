@@ -1392,9 +1392,9 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*150%** damage, reducing their DMG rate by **20%**.');
 			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
 
-			partnerDescription.set('fourStar', 'TBD');
-			partnerDescription.set('fiveStar','TBD');
-			partnerDescription.set('sixStar', 'TBD');
+			partnerDescription.set('fourStar', 'Deals damage equal to **ATK*210% (+60%)**; Increase basic HP by **20%**.');
+			partnerDescription.set('fiveStar','Sakura\'s resurrected ATK becomes **150%**; Increases basic ATK by **20%**.');
+			partnerDescription.set('sixStar', 'Deals damage equal to **105% (+95%)**; Chance to use Special Skill **+15%**');
 			break;
 
 		case "ai":
