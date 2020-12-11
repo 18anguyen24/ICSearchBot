@@ -1283,7 +1283,7 @@ function partnerDataBase(partner, typeToFind)
 		case "yume":
 			partnerDescription.set('cost', '16');
 
-			partnerDescription.set('passive', 'When Yume is present, reduce Rage recovery of all enemies by **20**; increasing self DEF penetration by **25%**');
+			partnerDescription.set('passive', 'When Yume is present, reduce Rage recovery of all enemies by **20%**; increasing self DEF penetration by **25%**');
 			partnerDescription.set('uniqueSkill', 'Attacks a __single__ enemy and deals **ATK*420%** damage and stealing **200** rage from the target. If the target\'s rage is 0 at this time, the target will be stunned for one round.');
 			partnerDescription.set('special',  'Attacks a __single__ enemy  and deals **ATK*165%** damage.');
 			partnerDescription.set('attack', 'Attacks a single enemy and deals **ATK*105%** damage.');
@@ -1405,9 +1405,9 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*150%** damage, reducing their DEF by **20%**.');
 			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
 
-			partnerDescription.set('fourStar', 'TBD');
-			partnerDescription.set('fiveStar','TBD');
-			partnerDescription.set('sixStar', 'TBD');
+			partnerDescription.set('fourStar', 'Increases **CRIT** Rate by **35%**; Increase basic HP by **20%**.');
+			partnerDescription.set('fiveStar','Ai\'s resurrected ATK becomes **150%**; Increases basic ATK by **20%**.');
+			partnerDescription.set('sixStar', 'Deals damage equal to **105% (+95%)**; Chance to use Special Skill **+15%**');
 			break;
 		}
 
