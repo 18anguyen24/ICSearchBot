@@ -1436,7 +1436,7 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('cost', '15');
 
 			partnerDescription.set('passive', 'Summons a Magic Box when Annis dies. If a Magic Box is currently on the field, its ATK will be doubled. When a Magic Box dies, Annis recovers **500** Rage');
-			partnerDescription.set('uniqueSkill', 'Deals **ATK*200%** damage to all enemies. Summons 1 Magic Box which inherits **100%** of Annis’s ATK, **100%** of her DEF, and **60%** of her HP. \nGrants **1** of these buffs when a Magic Box dies: \nAnnis becomes invincible for **1** round OR \nEnemy with highest Rage loses all of their Rage OR \n**HP** of attacker (except Leaders) reduces by half OR \nEnergy of **1** Ally partner in hand reduces by half');
+			partnerDescription.set('uniqueSkill', 'Deals **ATK*200%** damage to all enemies. Summons 1 Magic Box which inherits **100%** of Annis’s ATK, **100%** of her DEF, and **60%** of her HP. \nGrants **1** of these buffs when a Magic Box dies: \n1. Annis becomes invincible for **1** round OR \n2. Enemy with highest Rage loses all of their Rage OR \n3. **HP** of attacker (except Leaders) reduces by half OR \n4. Energy of **1** Ally partner in hand reduces by half.');
 			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*160%** damage, and boosts a Magic Box\'s ATK by **20%** for **3** rounds.');
 			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
 
