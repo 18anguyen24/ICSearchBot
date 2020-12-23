@@ -72,7 +72,7 @@ radiantIcons.set('sakura', 'https://raw.githubusercontent.com/18anguyen24/ICSear
 radiantIcons.set('junko', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/junko1.JPG');
 radiantIcons.set('ai', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/ai1.JPG');
 radiantIcons.set('nefir', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/nefir.png');
-radiantIcons.set('annisdora', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/annis_dora.JPG');
+radiantIcons.set('annisdora', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/annis_dora.png');
 
 
 
