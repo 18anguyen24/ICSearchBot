@@ -71,6 +71,8 @@ radiantIcons.set('okuni', 'https://raw.githubusercontent.com/18anguyen24/ICSearc
 radiantIcons.set('sakura', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/sakura1.JPG');
 radiantIcons.set('junko', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/junko1.JPG');
 radiantIcons.set('ai', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/ai1.JPG');
+radiantIcons.set('nefir', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/nefir.png');
+radiantIcons.set('annisdora', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/annis_dora.JPG');
 
 
 
@@ -142,6 +144,8 @@ rarity.set('okuni', 'SSR');
 rarity.set('sakura', 'SSR');
 rarity.set('junko', 'SSR');
 rarity.set('ai', 'SSR');
+rarity.set('nefir', 'SSR');
+rarity.set('annisdora', 'SSR');
 
 let trueNames = new Map();
 trueNames.set('kasumi', 'Kasumi');
@@ -210,6 +214,8 @@ trueNames.set('okuni', 'Okuni');
 trueNames.set('sakura', 'Sakura Minamoto');
 trueNames.set('junko', 'Junko Konno');
 trueNames.set('ai', 'Ai Mizuno');
+trueNames.set('nefir', 'Nefir');
+trueNames.set('annisdora', 'Annis Dora');
 
 client.once('ready', () => {
 	console.log('rd');
@@ -504,6 +510,9 @@ function findClass(name)
 	partnerClass.set('junko', 'heal');
 	partnerClass.set('ai', 'sorcerer');
 	partnerClass.set('sakura', 'spell');
+	partnerClass.set('nefir', 'sorcerer');
+	partnerClass.set('annisdora', 'summon');
+
 
 
 
@@ -1374,7 +1383,7 @@ function partnerDataBase(partner, typeToFind)
 		case "junko":
 			partnerDescription.set('cost', '13');
 
-			partnerDescription.set('passive', 'When Junko dies, she is resurrected as a zombie and receives 100% ATK, 100% DEF, and 100% HP, but she can only cast normal attacks. Triggers only once.');
+			partnerDescription.set('passive', 'When Junko dies, she is resurrected as a zombie and receives **100%** ATK, **100%** DEF, and **100%** HP, but she can only cast normal attacks. Triggers only once.');
 			partnerDescription.set('uniqueSkill', 'Attacks the enemy with the __lowest__ HP and deals **ATK*260%** damage.  \nIf the enemy\'s energy is > or = to 14, inflicts **Acrophobia**(Increases DMG taken by **100%**, does not affect enemy Leaders). \nHeals the two lowest HP allies for **ATK*120%**.');
 			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*150%** damage, reducing their Heal rate by **40%**.');
 			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
@@ -1387,7 +1396,7 @@ function partnerDataBase(partner, typeToFind)
 		case "sakura":
 			partnerDescription.set('cost', '15');
 
-			partnerDescription.set('passive', 'When Sakura dies, she is resurrected as a zombie and receives 100% ATK, 100% DEF, and 100% HP, but she can only cast normal attacks. Triggers only once.');
+			partnerDescription.set('passive', 'When Sakura dies, she is resurrected as a zombie and receives **100%** ATK, **100%** DEF, and **100%** HP, but she can only cast normal attacks. Triggers only once.');
 			partnerDescription.set('uniqueSkill', 'Attacks the enemy __team__ and deals **ATK*210%** damage.  All targets are inflicted with **Bad Luck**(Take **ATK*60%** DMG after every action). \nEnemies hit will also either recieve a __silence__, __stun__, or suffer an ATK or DEF reduction of **30%** for **1** round.');
 			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*150%** damage, reducing their DMG rate by **20%**.');
 			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
@@ -1400,7 +1409,7 @@ function partnerDataBase(partner, typeToFind)
 		case "ai":
 			partnerDescription.set('cost', '16');
 
-			partnerDescription.set('passive', 'When Ai dies, she is resurrected as a zombie and receives 100% ATK, 100% DEF, and 100% HP, but she can only cast normal attacks. Triggers only once.');
+			partnerDescription.set('passive', 'When Ai dies, she is resurrected as a zombie and receives **100%** ATK, 100% DEF, and **100%** HP, but she can only cast normal attacks. Triggers only once.');
 			partnerDescription.set('uniqueSkill', 'Attacks an enemy __row__ and deals **ATK*280%** damage. Targets hit will have a **50%** chance to be stunned for **1** round. \nAdditionally, for each enemy hit in the __row__, deal **ATK*120%** to a random enemy(max 3).');
 			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*150%** damage, reducing their DEF by **20%**.');
 			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
@@ -1408,6 +1417,32 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('fourStar', 'Increases **CRIT** Rate by **35%**; Increase basic HP by **20%**.');
 			partnerDescription.set('fiveStar','Ai\'s resurrected ATK becomes **150%**; Increases basic ATK by **20%**.');
 			partnerDescription.set('sixStar', 'Deals damage equal to **105% (+95%)**; Chance to use Special Skill **+15%**');
+			break;
+
+		case "nefir":
+			partnerDescription.set('cost', '18');
+
+			partnerDescription.set('passive', 'When Nefir sustains fatal damage, grants Death Res to a random allied Partner for **1** round and transfers this damage to its target. Triggers once per round. Will not trigger if there are no other allied Partners present');
+			partnerDescription.set('uniqueSkill', 'Nefir swaps the HP of the ally with the lowest **HP %**, then deals **160%** damage to __all__ enemies.  Will not swap if the team’s total **HP** is higher than the enemys\', but will increase this damage by **20%**');
+			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*160%** damage, healing Nefir by the same amount.');
+			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
+
+			partnerDescription.set('fourStar', 'TBD');
+			partnerDescription.set('fiveStar','TBD');
+			partnerDescription.set('sixStar', 'TBD');
+			break;
+
+		case "annisdora":
+			partnerDescription.set('cost', '15');
+
+			partnerDescription.set('passive', 'Summons a Magic Box when Annis dies. If a Magic Box is currently on the field, its ATK will be doubled. When a Magic Box dies, Annis recovers **500** Rage');
+			partnerDescription.set('uniqueSkill', 'Deals **ATK*200%** damage to all enemies. Summons 1 Magic Box which inherits **100%** of Annis’s ATK, **100%** of her DEF, and **60%** of her HP. Grants **1** of these buffs when a Magic Box dies: \nAnnis becomes invincible for **1** round | Enemy with highest Rage loses all of their Rage | \n**HP** of attacker (except Leaders) reduces by half | Energy of **1** Ally partner in hand reduces by half');
+			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*160%** damage, and boosts a Magic Box\'s ATK by **20%** for **3** rounds.');
+			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
+
+			partnerDescription.set('fourStar', 'TBD');
+			partnerDescription.set('fiveStar','TBD');
+			partnerDescription.set('sixStar', 'TBD');
 			break;
 		}
 
