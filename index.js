@@ -1427,9 +1427,9 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*160%** damage, healing Nefir by the same amount.');
 			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
 
-			partnerDescription.set('fourStar', 'TBD');
-			partnerDescription.set('fiveStar','TBD');
-			partnerDescription.set('sixStar', 'TBD');
+			partnerDescription.set('fourStar', 'Reduces enemys\' recovery rate by **30%** for **2** rounds; Increase basic HP by **20%**.');
+			partnerDescription.set('fiveStar','Grants Nefir a shield equal to **20%** of her max HP; Increases basic ATK by **20%**.');
+			partnerDescription.set('sixStar', 'Restores the Leader\'s HP by the same amount she is healed; Chance to use Special Skill **+15%**');
 			break;
 
 		case "annisdora":
