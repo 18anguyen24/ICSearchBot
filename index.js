@@ -74,7 +74,7 @@ radiantIcons.set('ai', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBo
 radiantIcons.set('nefir', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/nefir.png');
 radiantIcons.set('annisdora', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/annis_dora.png');
 radiantIcons.set('eileen', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/eileen.jpg');
-radiantIcons.set('charlotte', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/charlotte1.jpg');
+radiantIcons.set('charlotte', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/charlotte1.JPG');
 
 
 
