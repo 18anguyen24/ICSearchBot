@@ -73,6 +73,9 @@ radiantIcons.set('junko', 'https://raw.githubusercontent.com/18anguyen24/ICSearc
 radiantIcons.set('ai', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/ai1.JPG');
 radiantIcons.set('nefir', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/nefir.png');
 radiantIcons.set('annisdora', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/annis_dora.png');
+radiantIcons.set('eileen', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/eileen.jpg');
+radiantIcons.set('charlotte', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/charlotte1.jpg');
+
 
 
 
@@ -146,6 +149,10 @@ rarity.set('junko', 'SSR');
 rarity.set('ai', 'SSR');
 rarity.set('nefir', 'SSR');
 rarity.set('annisdora', 'SSR');
+rarity.set('eileen', 'SSR');
+rarity.set('charlotte', 'SSR');
+
+
 
 let trueNames = new Map();
 trueNames.set('kasumi', 'Kasumi');
@@ -216,6 +223,9 @@ trueNames.set('junko', 'Junko Konno');
 trueNames.set('ai', 'Ai Mizuno');
 trueNames.set('nefir', 'Nefir');
 trueNames.set('annisdora', 'Annis Dora');
+trueNames.set('eileen', 'Eileen');
+trueNames.set('charlotte', 'Charlotte');
+
 
 client.once('ready', () => {
 	console.log('rd');
@@ -512,7 +522,8 @@ function findClass(name)
 	partnerClass.set('sakura', 'spell');
 	partnerClass.set('nefir', 'sorcerer');
 	partnerClass.set('annisdora', 'summon');
-
+	partnerClass.set('eileen', 'light');
+	partnerClass.set('charlotte', 'light');
 
 
 
@@ -1440,9 +1451,35 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*160%** damage, and boosts a Magic Box\'s ATK by **20%** for **3** rounds.');
 			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
 
-			partnerDescription.set('fourStar', 'TBD');
-			partnerDescription.set('fiveStar','TBD');
-			partnerDescription.set('sixStar', 'TBD');
+			partnerDescription.set('fourStar', 'Increase Magic Box ATK and DEF by **20%**; Increase basic HP by **20%**.');
+			partnerDescription.set('fiveStar','Annis and Magic Boxes\'s sustained taken group damage decreases by **30%**; Increases basic ATK by **20%**.');
+			partnerDescription.set('sixStar', 'Magic Box CRIT Rate **+20%**; Chance to use Special Skill **+15%**');
+			break;
+		
+		case "eileen":
+			partnerDescription.set('cost', '13');
+
+			partnerDescription.set('passive', 'Eileen provides assistance, increasing the DMG RES Rate of Leader (excluding Eileen) and allies on the same row as Eileen by **15%**, and Charlotte\'s by an additional **10%**.');
+			partnerDescription.set('uniqueSkill', 'Deals **ATK*200%** damage to __all__ enemies. Has a **20%** chance of stunning at least **1** enemies, for **1** round.');
+			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*165%** damage, ignoring **20%** of enemy\'s DEF.');
+			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
+
+			partnerDescription.set('fourStar', 'Stuns at least **2** enemies; Increase basic HP by **20%**.');
+			partnerDescription.set('fiveStar','Increases the DMG RES Rate of allies on the same __row__ as Eileen by **25%**; Increases basic ATK by **20%**.');
+			partnerDescription.set('sixStar', 'Ignores **30%** of enemy\'s DEF; Chance to use Special Skill **+15%**');
+			break;
+
+		case "charlotte":
+			partnerDescription.set('cost', '15');
+
+			partnerDescription.set('passive', 'When an allied Partner dies while Charlotte is present, the killer is marked as **Murderer** and Charlotte restores **600** Rage..');
+			partnerDescription.set('uniqueSkill', 'Deals **ATK*200%** damage to __all__ enemies, dealing double damage to **Murderers**.');
+			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*165%** damage to **2** enemies on the same __row__.');
+			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
+
+			partnerDescription.set('fourStar', 'Deals **ATK*200%(+50%)** damage; Increase basic HP by **20%**.');
+			partnerDescription.set('fiveStar','Restores **600(+400)** Rage; Increases basic ATK by **20%**.');
+			partnerDescription.set('sixStar', 'Grants a shield with **20%** of max HP.; Chance to use Special Skill **+15%**');
 			break;
 		}
 
