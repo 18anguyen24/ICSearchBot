@@ -572,6 +572,7 @@ function awakenSkill(partner)
 	let partnerAwakenSkill = new Map();
 	partnerAwakenSkill.set('maki', 'Deals damage equal to **ATK*500% (+50%)**; \nIncrease DMG Rate and DMG Res Rate by **20%**.');
 	partnerAwakenSkill.set('miyuki', 'Deals damage equal to **ATK*270% (+30%)**; \nIncrease DMG Rate and DMG Res Rate by **20%**.');
+	partnerAwakenSkill.set('hersey', 'Ignores **15%** of target\'s DEF; \nIncrease DMG Rate and DMG Res Rate by **10%**.)
 
 	if(partnerAwakenSkill.has(partner))
 	{
@@ -1472,7 +1473,7 @@ function partnerDataBase(partner, typeToFind)
 		case "charlotte":
 			partnerDescription.set('cost', '15');
 
-			partnerDescription.set('passive', 'When an allied Partner dies while Charlotte is present, the killer is marked as **Murderer** and Charlotte restores **600** Rage..');
+			partnerDescription.set('passive', 'When an allied Partner dies while Charlotte is present, the killer is marked as **Murderer** and Charlotte restores **600** Rage.');
 			partnerDescription.set('uniqueSkill', 'Deals **ATK*200%** damage to __all__ enemies, dealing double damage to **Murderers**.');
 			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*165%** damage to **2** enemies on the same __row__.');
 			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
