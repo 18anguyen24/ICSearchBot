@@ -572,7 +572,7 @@ function awakenSkill(partner)
 	let partnerAwakenSkill = new Map();
 	partnerAwakenSkill.set('maki', 'Deals damage equal to **ATK*500% (+50%)**; \nIncrease DMG Rate and DMG Res Rate by **20%**.');
 	partnerAwakenSkill.set('miyuki', 'Deals damage equal to **ATK*270% (+30%)**; \nIncrease DMG Rate and DMG Res Rate by **20%**.');
-	partnerAwakenSkill.set('hersey', 'Ignores **15%** of target\'s DEF; \nIncrease DMG Rate and DMG Res Rate by **10%**.)
+	partnerAwakenSkill.set('hersey', 'Ignores **15%** of target\'s DEF; \nIncrease DMG Rate and DMG Res Rate by **10%**.');
 
 	if(partnerAwakenSkill.has(partner))
 	{
