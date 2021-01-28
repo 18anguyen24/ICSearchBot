@@ -77,7 +77,7 @@ radiantIcons.set('eileen', 'https://raw.githubusercontent.com/18anguyen24/ICSear
 radiantIcons.set('charlotte', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/charlotte1.JPG');
 radiantIcons.set('abby', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/abby.jpg');
 radiantIcons.set('emma', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/sr/emma.jpg');
-radiantIcons.set('beryl', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/beryl.jpg');
+radiantIcons.set('beriall', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/beryl.jpg');
 
 
 let rarity = new Map();
@@ -153,7 +153,7 @@ rarity.set('eileen', 'SSR');
 rarity.set('charlotte', 'SSR');
 rarity.set('abby', 'SSR');
 rarity.set('emma', 'SR');
-rarity.set('beryl', 'SSR');
+rarity.set('berial', 'SSR');
 
 
 
@@ -230,7 +230,7 @@ trueNames.set('eileen', 'Eileen');
 trueNames.set('charlotte', 'Charlotte');
 trueNames.set('abby', 'Abby');
 trueNames.set('emma', 'Emma');
-trueNames.set('beryl', 'Beryl');
+trueNames.set('berial', 'Berial');
 
 
 client.once('ready', () => {
@@ -532,7 +532,7 @@ function findClass(name)
 	partnerClass.set('charlotte', 'light');
 	partnerClass.set('abby', 'attack');
 	partnerClass.set('emma', 'sorcerer');
-	partnerClass.set('beryl', 'guardian');
+	partnerClass.set('berial', 'guardian');
 
 
 
@@ -1507,7 +1507,7 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('sixStar', 'TBA; Chance to use Special Skill **+15%**');
 			break;
 
-		case "beryl":
+		case "berial":
 			partnerDescription.set('cost', '18');
 
 			partnerDescription.set('passive', 'When Berial is present, AOE DMG taken by allied Leader and partners reduces by **15%**. If Leader is Light Paladin or Spirit Healer and Berial is present, allied Guardians appeared gain Taunt for **2** rounds.');
