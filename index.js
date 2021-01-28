@@ -77,7 +77,7 @@ radiantIcons.set('eileen', 'https://raw.githubusercontent.com/18anguyen24/ICSear
 radiantIcons.set('charlotte', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/charlotte1.JPG');
 radiantIcons.set('abby', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/abby.jpg');
 radiantIcons.set('emma', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/sr/emma.jpg');
-radiantIcons.set('beriall', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/beryl.jpg');
+radiantIcons.set('berial', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/beryl.jpg');
 
 
 let rarity = new Map();
