@@ -61,7 +61,7 @@ radiantIcons.set('mary', 'https://raw.githubusercontent.com/18anguyen24/ICSearch
 radiantIcons.set('mia', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/r/mia.jpg');
 radiantIcons.set('astaroth', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/astaroth.JPG');
 radiantIcons.set('madhatter', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/sr/mad_hatter.JPG');
-radiantIcons.set('yume', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/yume.JPG');
+radiantIcons.set('yume', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/yume1.JPG');
 radiantIcons.set('natata', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/natata.JPG');
 radiantIcons.set('alena', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/alina.JPG');
 radiantIcons.set('brooke', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/brooke1.JPG');
@@ -75,9 +75,9 @@ radiantIcons.set('nefir', 'https://raw.githubusercontent.com/18anguyen24/ICSearc
 radiantIcons.set('annisdora', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/annis_dora.png');
 radiantIcons.set('eileen', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/eileen.jpg');
 radiantIcons.set('charlotte', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/charlotte1.JPG');
-
-
-
+radiantIcons.set('abby', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/abby.JPG');
+radiantIcons.set('emma', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/sr/emma.JPG');
+radiantIcons.set('beryl', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/beryl.JPG');
 
 
 let rarity = new Map();
@@ -151,6 +151,9 @@ rarity.set('nefir', 'SSR');
 rarity.set('annisdora', 'SSR');
 rarity.set('eileen', 'SSR');
 rarity.set('charlotte', 'SSR');
+rarity.set('abby', 'SSR');
+rarity.set('emma', 'SR');
+rarity.set('beryl', 'SSR');
 
 
 
@@ -225,6 +228,9 @@ trueNames.set('nefir', 'Nefir');
 trueNames.set('annisdora', 'Annis Dora');
 trueNames.set('eileen', 'Eileen');
 trueNames.set('charlotte', 'Charlotte');
+trueNames.set('abby', 'Abby');
+trueNames.set('emma', 'Emma');
+trueNames.set('beryl', 'Beryl');
 
 
 client.once('ready', () => {
@@ -252,7 +258,7 @@ client.on('message', async message =>
 			"\n Displays link to banner from #guide." +
 			"\n\n **!skins** " +
 			"\n Displays link to (most)future skins possible from wiki." +
-			"\n **!wiki**" +
+			"\n\n **!wiki**" +
 			"\n Displays link to the wiki." +
 			"\n\n\n KR FUTURE UNITS' TRANSLATION CREDITS GO TO @Hyou#5070 AND @MEKA#6993";
         message.channel.send(str);
@@ -303,7 +309,7 @@ client.on('message', async message =>
 		const name = args.join('').toLowerCase();
 		if (!radiantIcons.has(name)) 
 		{
-			message.channel.send('ERROR: Partner not found.');
+			message.channel.send('Partner not found.  Check **!wiki** if I don\'t have them!');
 		}
 		else 
 		{
@@ -524,6 +530,9 @@ function findClass(name)
 	partnerClass.set('annisdora', 'summon');
 	partnerClass.set('eileen', 'light');
 	partnerClass.set('charlotte', 'light');
+	partnerClass.set('abby', 'attack');
+	partnerClass.set('emma', 'sorcerer');
+	partnerClass.set('beryl', 'guardian');
 
 
 
@@ -1482,6 +1491,46 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('fiveStar','Restores **600(+400)** Rage; Increases basic ATK by **20%**.');
 			partnerDescription.set('sixStar', 'Grants a shield with **20%** of max HP.; Chance to use Special Skill **+15%**');
 			break;
+
+		case "abby":
+			partnerDescription.set('cost', '14');
+
+			partnerDescription.set('passive', '');
+			partnerDescription.set('uniqueSkill', '');
+			partnerDescription.set('special',  '');
+			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
+
+			partnerDescription.set('fourStar', '; Increase basic HP by **20%**.');
+			partnerDescription.set('fiveStar','; Increases basic ATK by **20%**.');
+			partnerDescription.set('sixStar', '; Chance to use Special Skill **+15%**');
+			break;
+
+		case "beryl":
+			partnerDescription.set('cost', '18');
+
+			partnerDescription.set('passive', '');
+			partnerDescription.set('uniqueSkill', '');
+			partnerDescription.set('special',  '');
+			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
+
+			partnerDescription.set('fourStar', '; Increase basic HP by **20%**.');
+			partnerDescription.set('fiveStar','; Increases basic ATK by **20%**.');
+			partnerDescription.set('sixStar', '; Chance to use Special Skill **+15%**');
+			break;
+
+		case "emma":
+			partnerDescription.set('cost', '16');
+
+			partnerDescription.set('passive', '');
+			partnerDescription.set('uniqueSkill', '');
+			partnerDescription.set('special',  '');
+			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
+
+			partnerDescription.set('fourStar', '; Increase basic HP by **20%**.');
+			partnerDescription.set('fiveStar','; Increases basic ATK by **20%**.');
+			partnerDescription.set('sixStar', '; Chance to use Special Skill **+15%**');
+			break;
+
 		}
 
 	return partnerDescription.get(typeToFind);
