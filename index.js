@@ -1521,14 +1521,14 @@ function partnerDataBase(partner, typeToFind)
 		case "emma":
 			partnerDescription.set('cost', '16');
 
-			partnerDescription.set('passive', '');
-			partnerDescription.set('uniqueSkill', '');
-			partnerDescription.set('special',  '');
+			partnerDescription.set('passive', 'TBA');
+			partnerDescription.set('uniqueSkill', 'TBA');
+			partnerDescription.set('special',  'TBA');
 			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
 
-			partnerDescription.set('fourStar', '; Increase basic HP by **20%**.');
-			partnerDescription.set('fiveStar','; Increases basic ATK by **20%**.');
-			partnerDescription.set('sixStar', '; Chance to use Special Skill **+15%**');
+			partnerDescription.set('fourStar', 'TBA; Increase basic HP by **20%**.');
+			partnerDescription.set('fiveStar','TBA; Increases basic ATK by **20%**.');
+			partnerDescription.set('sixStar', 'TBA; Chance to use Special Skill **+15%**');
 			break;
 
 		}
