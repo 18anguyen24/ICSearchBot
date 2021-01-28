@@ -61,7 +61,7 @@ radiantIcons.set('mary', 'https://raw.githubusercontent.com/18anguyen24/ICSearch
 radiantIcons.set('mia', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/r/mia.jpg');
 radiantIcons.set('astaroth', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/astaroth.JPG');
 radiantIcons.set('madhatter', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/sr/mad_hatter.JPG');
-radiantIcons.set('yume', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/yume1.JPG');
+radiantIcons.set('yume', 'https://github.com/18anguyen24/ICSearchBot/blob/main/ssr/yume1.jpg?raw=true');
 radiantIcons.set('natata', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/natata.JPG');
 radiantIcons.set('alena', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/alina.JPG');
 radiantIcons.set('brooke', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/brooke1.JPG');
