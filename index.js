@@ -75,9 +75,9 @@ radiantIcons.set('nefir', 'https://raw.githubusercontent.com/18anguyen24/ICSearc
 radiantIcons.set('annisdora', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/annis_dora.png');
 radiantIcons.set('eileen', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/eileen.jpg');
 radiantIcons.set('charlotte', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/charlotte1.JPG');
-radiantIcons.set('abby', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/abby.JPG');
-radiantIcons.set('emma', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/sr/emma.JPG');
-radiantIcons.set('beryl', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/beryl.JPG');
+radiantIcons.set('abby', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/abby.jpg');
+radiantIcons.set('emma', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/sr/emma.jpg');
+radiantIcons.set('beryl', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/beryl.jpg');
 
 
 let rarity = new Map();
@@ -567,6 +567,8 @@ function partnerLineup(partner)
 	partnerLineSkill.set('sakura', '**[Activation Requirement]** Junko Konno and Ai Mizuno are in the team. \n**[Activation Effect]** Whenever Sakura attacks, Junko and Ai will also launch an attack.');
 	partnerLineSkill.set('ai', '**[Activation Requirement]** Sakura Minamoto and Junko Konno are in the team. \n**[Activation Effect]** Whenever Ai attacks, Sakura and Junko will also launch an attack.');
 	partnerLineSkill.set('junko', '**[Activation Requirement]** Sakura Minamoto and Ai Mizuno are in the team. \n**[Activation Effect]** Whenever Junko attacks, Sakura and Ai will also launch an attack.');
+	partnerLineSkill.set('abby', '**[Activation Requirement]** Deploy Yasmine. \n**[Activation Effect]** Reduces Abby\'s Energy cost by **1**');
+
 
 
 	if(partnerLineSkill.has(partner))
