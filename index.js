@@ -78,6 +78,8 @@ radiantIcons.set('charlotte', 'https://raw.githubusercontent.com/18anguyen24/ICS
 radiantIcons.set('abby', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/abby.jpg');
 radiantIcons.set('emma', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/sr/emma.jpg');
 radiantIcons.set('berial', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/beryl.jpg');
+radiantIcons.set('cubie', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/cubie.png');
+radiantIcons.set('yasmine', 'https://raw.githubusercontent.com/18anguyen24/ICSearchBot/main/ssr/yasmine.png');
 
 
 let rarity = new Map();
@@ -154,6 +156,8 @@ rarity.set('charlotte', 'SSR');
 rarity.set('abby', 'SSR');
 rarity.set('emma', 'SR');
 rarity.set('berial', 'SSR');
+rarity.set('cubie', 'SSR');
+rarity.set('yasmine', 'SSR');
 
 
 
@@ -231,6 +235,9 @@ trueNames.set('charlotte', 'Charlotte');
 trueNames.set('abby', 'Abby');
 trueNames.set('emma', 'Emma');
 trueNames.set('berial', 'Berial');
+trueNames.set('yasmine', 'Yasmine');
+trueNames.set('cubie', 'Cubie');
+
 
 
 client.once('ready', () => {
@@ -260,7 +267,8 @@ client.on('message', async message =>
 			"\n Displays link to (most)future skins possible from wiki." +
 			"\n\n **!wiki**" +
 			"\n Displays link to the wiki." +
-			"\n\n\n KR FUTURE UNITS' TRANSLATION CREDITS GO TO @Hyou#5070 AND @MEKA#6993";
+			"\n\n\n **KR FUTURE UNITS' TRANSLATION CREDITS GO TO @Hyou#5070 AND @MEKA#6993**" +
+			"\n\n New unit information are now from wiki.";
         message.channel.send(str);
 	}
 	
@@ -533,6 +541,8 @@ function findClass(name)
 	partnerClass.set('abby', 'attack');
 	partnerClass.set('emma', 'sorcerer');
 	partnerClass.set('berial', 'guardian');
+	partnerClass.set('yasmine', 'guardian');
+	partnerClass.set('cubie', 'light');
 
 
 
@@ -568,6 +578,7 @@ function partnerLineup(partner)
 	partnerLineSkill.set('ai', '**[Activation Requirement]** Sakura Minamoto and Junko Konno are in the team. \n**[Activation Effect]** Whenever Ai attacks, Sakura and Junko will also launch an attack.');
 	partnerLineSkill.set('junko', '**[Activation Requirement]** Sakura Minamoto and Ai Mizuno are in the team. \n**[Activation Effect]** Whenever Junko attacks, Sakura and Ai will also launch an attack.');
 	partnerLineSkill.set('abby', '**[Activation Requirement]** Deploy Yasmine. \n**[Activation Effect]** Reduces Abby\'s Energy cost by **1**');
+	partnerLineSkill.set('yasmine', '**[Activation Requirement]** Deploy Abby. \n**[Activation Effect]** Reduces Yasmine\'s Energy cost by **1**');
 
 
 
@@ -584,6 +595,9 @@ function awakenSkill(partner)
 	partnerAwakenSkill.set('maki', 'Deals damage equal to **ATK*500% (+50%)**; \nIncrease DMG Rate and DMG Res Rate by **20%**.');
 	partnerAwakenSkill.set('miyuki', 'Deals damage equal to **ATK*270% (+30%)**; \nIncrease DMG Rate and DMG Res Rate by **20%**.');
 	partnerAwakenSkill.set('hersey', 'Ignores **15%** of target\'s DEF; \nIncrease DMG Rate and DMG Res Rate by **10%**.');
+	partnerAwakenSkill.set('diana', 'Restores allied Leader\'s HP by **33%(+17%); \nIncrease DMG Rate and DMG Res Rate by **10%**.');
+	partnerAwakenSkill.set('phoebe', 'Inherits **100%** HP and gains **1000** Rage when revived; \nIncrease DMG Rate and DMG Res Rate by **10%**.');
+
 
 	if(partnerAwakenSkill.has(partner))
 	{
@@ -1502,9 +1516,9 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*160%** damage to an enemy and stuns him/her for 1 round.');
 			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
 
-			partnerDescription.set('fourStar', 'TBA; Increase basic HP by **20%**.');
-			partnerDescription.set('fiveStar','TBA; Increases basic ATK by **20%**.');
-			partnerDescription.set('sixStar', 'TBA; Chance to use Special Skill **+15%**');
+			partnerDescription.set('fourStar', 'Deals **ATK*280% (+70%)** damage to enemies on the same __row__; Increase basic HP by **20%**.');
+			partnerDescription.set('fiveStar','Increases Abby\'s damage dealt to enemy Sorcerers or Attackers by **50%(+25%)**; Increases basic ATK by **20%**.');
+			partnerDescription.set('sixStar', 'Deals **ATK*160%(+40%)** damage; Chance to use Special Skill **+15%**');
 			break;
 
 		case "berial":
@@ -1515,9 +1529,9 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*160%** damage , reducing their DMG Rate by **10%** for **1** round.');
 			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
 
-			partnerDescription.set('fourStar', '; Increase basic HP by **20%**.');
-			partnerDescription.set('fiveStar','; Increases basic ATK by **20%**.');
-			partnerDescription.set('sixStar', '; Chance to use Special Skill **+15%**');
+			partnerDescription.set('fourStar', 'Reduces AOE DMG taken by **20%(+10%)**; Increase basic HP by **20%**.');
+			partnerDescription.set('fiveStar','Reduces AOE DMG taken by allied Leader and partners by **15%(+5%)**; Increases basic ATK by **20%**.');
+			partnerDescription.set('sixStar', 'Reduces DMG Rate by **10%(+10%)**; Chance to use Special Skill **+15%**');
 			break;
 
 		case "emma":
@@ -1528,11 +1542,36 @@ function partnerDataBase(partner, typeToFind)
 			partnerDescription.set('special',  'Attacks an __enemy column__ and deals ATK*87% damage.');
 			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*100%** damage.');
 
-			partnerDescription.set('threeStar', 'TBA; Increase basic HP by **20%**.');
-			partnerDescription.set('fourStar','TBA; Increases basic ATK by **20%**.');
-			partnerDescription.set('fiveStar', 'TBA; Chance to use Special Skill **+15%**');
+			partnerDescription.set('threeStar', 'Deals damage equal to **ATK*85%(+20%)**; Increase basic HP by **20%**.');
+			partnerDescription.set('fourStar','Increases DEF Penetration by **5%**; Increases basic ATK by **20%**.');
+			partnerDescription.set('fiveStar', 'Has a **30%** chance to stun the target for **1** round; Chance to use Special Skill **+15%**');
 			break;
 
+		case "cubie":
+			partnerDescription.set('cost', '11');
+
+			partnerDescription.set('passive', 'If Cubie hits exactly **2** enemies with each arrow, the two will fall in love and be stunned for **1** round.');
+			partnerDescription.set('uniqueSkill', 'Deals damage to each __column__ of enemies, dealing **ATK*220%** damage.');
+			partnerDescription.set('special',  'Attacks an enemy __column__ and deals **ATK*150%** damage , reducing their DMG Rate by **10%** for **1** round.');
+			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
+
+			partnerDescription.set('fourStar', 'Reduces AOE DMG taken by **20%(+10%)**; Increase basic HP by **20%**.');
+			partnerDescription.set('fiveStar','Reduces AOE DMG taken by allied Leader and partners by **15%(+5%)**; Increases basic ATK by **20%**.');
+			partnerDescription.set('sixStar', 'Reduces DMG Rate by **10%(+10%)**; Chance to use Special Skill **+15%**');
+			break;
+
+		case "yasmine":
+			partnerDescription.set('cost', '14');
+
+			partnerDescription.set('passive', 'When Yasmine appears, the first two partners or summoned in each column switch places.');
+			partnerDescription.set('uniqueSkill', 'Attacks __all__ enemies,  reducing their DMG Rate by 30% while increasing Yasmine\'s special skill cast rate by **100%** for **2** rounds (not stackable).');
+			partnerDescription.set('special',  'Attacks a __single__ enemy and deals **ATK*160%** damage , switching their position with an enemy partner with the lowest HP. Ineffective against Leader.');
+			partnerDescription.set('attack', 'Attacks a __single__ enemy and deals **ATK*105%** damage.');
+
+			partnerDescription.set('fourStar', 'Reduces DMG Rate by **30%(+10%)** for all enemies; Increase basic HP by **20%**.');
+			partnerDescription.set('fiveStar','When Yasmine appears, she gains a shield with **20%** of max HP; Increases basic ATK by **20%**.');
+			partnerDescription.set('sixStar', 'Deals **ATK*160%(+40%)** damage.; Chance to use Special Skill **+15%**');
+			break;
 		}
 
 	return partnerDescription.get(typeToFind);
